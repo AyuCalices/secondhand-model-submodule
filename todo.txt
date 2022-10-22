@@ -1,0 +1,18 @@
+TODO:
+=====
+- extrahiert das ZIP in einen Ordner AUSSERHALB (!) des Eclipse Workspace.
+- legt für jeden extrahierten Teilordner eine User-Library in Eclipse unter
+  Window->Preferences->Java->Build Path->User Libraries an. Die Namen der
+  Verzeichnisse sind dabei brauchbare Namen für die User-Libraries
+- die zugehörigen JAR-Files werden dann mittels Menüpunkt "Add External JARs..."
+  den gerade erzeugten User-Libraries hinzugefügt. Achtet dabei darauf
+  ausschließlich JARs hinzuzufügen die keinen Namensbestandteil "source" aufweisen.
+- Source-JARs/ZIPs müssen stattdesen als Source-Attachment ihrer entsprechenden
+  JARs in den User-Libraries konfiguriert werden! Klappt dazu die User-Library auf,
+  klapp dort das assoziierte non-source JAR auf, markiert "source attachment", wählt
+  "edit...", wählt dort "external location" und klickt dann "external File...".
+- Fügt diese User-Libraries je nach Bedarf den Java-Projekten unter
+  Project->Properties->Java Build Path->Libraries hinzu.
+
+Beachtet dass die User-Library jfx-11.0 erst ab Java 11+ zusätzlich benötigt wird.
+Bei Java 8-10 ist Java-FX Teil des JDK!
